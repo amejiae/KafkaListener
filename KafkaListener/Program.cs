@@ -14,7 +14,7 @@ namespace KafkaListener
             IEnumerable<KeyValuePair<string, string>> config = BuildConsumerConfig();
             using (var consumer = new ConsumerBuilder<Ignore, string>(config).Build())
             {
-                consumer.Subscribe("logistics.instruction.job-state-change-dev");
+                consumer.Subscribe("test-topic");
 
                 while (true)
                 {
